@@ -27,6 +27,8 @@ class Fire(models.Model):
     objects = models.GeoManager()
     
     class Meta:
+        unique_together = ('date', 'satellite', 'confidence', 'frp', 'brightness21', 'brightness31',
+                           'scan', 'track', 'version', 'geometry')
         verbose_name = 'MODIS данные о пожаре'
         verbose_name_plural = 'MODIS данные о пожарах'
         
