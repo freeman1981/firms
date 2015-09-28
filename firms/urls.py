@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from fires.views import HomePageView
+from fires.views import HomePageView, JQ
 
 urlpatterns = [
     url(r'^$', HomePageView.as_view()),
+    url(r'^jq$', JQ.as_view()),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^fires/', include('fires.urls')),
 ]

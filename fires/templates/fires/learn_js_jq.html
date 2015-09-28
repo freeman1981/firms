@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+    <style>
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0;}
+      #map{ height: 80% }
+      #tab{ height: 20% }
+    </style>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <link rel="stylesheet" href='{% static 'fires/jquery-ui-1.11.4/jquery-ui.min.css' %}'>
+    <script src="{% static 'fires/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'fires/jquery-ui-1.11.4/jquery-ui.min.js' %}"></script>
+    <title>foo</title>
+    <script src="{% static 'fires/mainapp.js' %}"></script>
+</head>
+<body>
+<div id="map"></div>
+<div id="tab">
+    <input id="from_date">
+    <input id="to_date">
+    <div>
+        <p>Count:</p>
+        <p id="count">0</p>
+    </div>
+    <button id="go">GO!</button>
+</div>
+
+</body>
+</html>

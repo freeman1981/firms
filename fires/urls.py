@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from .views import fires
+from .views import fires, FireView
 
 urlpatterns = [
-    url(r'^$', fires),
+    url(r'^$', FireView.as_view()),
 ]
